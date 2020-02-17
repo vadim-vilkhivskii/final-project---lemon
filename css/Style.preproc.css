@@ -5,4 +5,41 @@
   margin: 0;
   padding: 0; }
 
+.header {
+  padding: 45px 0;
+  background: url("../images/header_background.png"); }
+
+.nav li {
+  padding: 0 12px;
+  position: relative; }
+  .nav li a {
+    font-family: 'Source Sans Pro-SemiBold';
+    font-size: 16px;
+    text-shadow: none;
+    color: #fffefe;
+    padding: 13px 0; }
+
+.nav li a:hover {
+  background: none; }
+
+.nav li a:hover:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 47%;
+  background-color: #008ed6; }
+
+.nav li a:hover:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  width: 47%;
+  background-color: #008ed6; }
+
 /*# sourceMappingURL=Style.preproc.css.map */
