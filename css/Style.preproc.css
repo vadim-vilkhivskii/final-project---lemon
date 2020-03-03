@@ -1,15 +1,8 @@
 @import url(bootstrap.css);
 @import url(bootstrap-theme.css);
 @import url(fonts.css);
-* {
-  margin: 0;
-  padding: 0; }
-
-.header {
-  padding-top: 20px;
-  background: url("../images/header_background.png") no-repeat;
-  background-size: cover; }
-
+@import url(owl.carousel.min.css);
+@import url(owl.theme.default.min.css);
 .nav {
   margin-bottom: 46px; }
   .nav li {
@@ -19,11 +12,19 @@
       font-family: 'Source Sans Pro-SemiBold';
       font-size: 16px;
       text-shadow: none;
-      color: #fffefe;
       padding: 13px 0; }
 
-.nav li a:hover {
-  background: none; }
+.navbar-default {
+  background-color: transparent !important;
+  border-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  .navbar-default .navbar-nav > li > a {
+    color: #fffefe; }
+
+.nav > li > a:hover {
+  background: none;
+  color: #fffefe; }
 
 .nav li a:before {
   display: block;
@@ -38,6 +39,9 @@
 
 .nav li a:hover:before {
   width: 47%; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fffefe; }
 
 .nav li a:after {
   display: block;
@@ -54,50 +58,76 @@
   width: 47%; }
 
 .header {
+  padding-top: 20px;
+  background: url("../images/header_background.png") no-repeat;
+  background-size: cover;
   margin-bottom: 65px; }
   .header span {
-    font-family: 'Source Sans Pro-Bold';
+    font-family: "Source Sans Pro-Bold";
     color: #008ed6;
     font-size: 14px; }
   .header h1 {
-    font-family: 'Source Sans Pro-Regular';
+    font-family: "Source Sans Pro-SemiBold";
     font-size: 48px;
     color: white; }
   .header p {
-    font-family: 'Source Sans Pro-Regular';
+    font-family: "Source Sans Pro-SemiBold";
     color: #999999;
     font-size: 18px; }
-  .header .header__link1 {
-    background-color: #008ed6;
-    text-shadow: none;
-    border: none;
-    line-height: 35px;
-    margin-left: 10px;
-    margin-right: 20px; }
-  .header .header__link2 {
+  .header .btn {
     line-height: 35px;
     border: 1px solid #444348;
-    margin-right: 10px; }
-  .header .btn {
-    width: 160px;
+    width: 100%;
     height: 50px;
-    font-family: 'Source Sans Pro-Bold';
+    font-family: "Source Sans Pro-Bold";
     font-size: 14px;
     text-transform: uppercase;
     color: white;
-    margin-top: 60px; }
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: -15px; }
+  .header .btn:hover {
+    background-color: #008ed6;
+    border: transparent; }
+
+@media (max-width: 1200px) {
+  .header__mobile {
+    display: none; } }
+.title-block {
+  position: relative; }
+  .title-block span {
+    font-family: "Source Sans Pro-Bold";
+    color: #008ed6;
+    font-size: 14px; }
+  .title-block h2 {
+    font-family: "Source Sans Pro-SemiBold";
+    font-size: 36px;
+    position: relative;
+    margin-bottom: 72px;
+    padding-bottom: 40px; }
+    .title-block h2:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -21px;
+      width: 20px;
+      height: 2px;
+      background-color: #008ed6; }
+    .title-block h2:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: 2px;
+      width: 20px;
+      height: 2px;
+      background-color: #008ed6; }
 
 .features {
   margin-bottom: 75px; }
-  .features span {
-    font-family: 'Source Sans Pro-Bold';
-    color: #008ed6;
-    font-size: 14px; }
-  .features h2 {
-    font-family: 'Source Sans Pro-SemiBold';
-    font-size: 36px;
-    position: relative;
-    margin-bottom: 72px; }
   .features h3 {
     font-family: 'Source Sans Pro-Regular';
     font-size: 24px;
@@ -148,16 +178,7 @@
   background: url("../images/bg-car.png") no-repeat;
   background-size: cover;
   padding: 65px 0 60px; }
-  .car_block .car_block__span {
-    font-family: 'Source Sans Pro-Bold';
-    color: #008ed6;
-    font-size: 14px;
-    text-transform: uppercase; }
-  .car_block .car_block__h2 {
-    font-family: 'Source Sans Pro-SemiBold';
-    font-size: 36px;
-    position: relative;
-    margin-bottom: 72px;
+  .car_block .title-block h2 {
     color: white; }
   .car_block .car_block-block {
     width: 100%; }
@@ -193,23 +214,6 @@
 
 .pricings {
   padding-top: 60px; }
-  .pricings .pricings-up {
-    font-family: 'Source Sans Pro-Bold';
-    color: #008ed6;
-    font-size: 14px;
-    text-transform: uppercase; }
-  .pricings .pricings-h2 {
-    font-family: 'Source Sans Pro-SemiBold';
-    font-size: 36px;
-    position: relative;
-    margin-bottom: 72px; }
-  .pricings .pricings-h2:after {
-    width: 40px;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    background-color: #008ed6; }
 
 .pricing__block {
   border: 1px solid #e0e0e0;
@@ -223,7 +227,7 @@
     font-size: 48px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0; }
-    .pricing__block .pricing__block-cost p {
+    .pricing__block .pricing__block-cost span {
       font-size: 18px;
       color: #999999; }
   .pricing__block h3 {
@@ -256,7 +260,7 @@
 .pricing__block:hover .pricing__block-cost {
   background-color: #008ed6;
   color: white; }
-  .pricing__block:hover .pricing__block-cost p {
+  .pricing__block:hover .pricing__block-cost span {
     color: white; }
 .pricing__block:hover h3 {
   color: #008ed6; }
@@ -295,7 +299,8 @@
       resize: none;
       height: 190px;
       border: 1px solid #444348;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding: 15px 20px; }
     .contact-us .contact-us__form button {
       font-family: 'Source Sans Pro-Bold';
       font-size: 14px;
@@ -329,5 +334,20 @@
   .maps iframe {
     width: 100%;
     height: 370px; }
+
+.footer {
+  padding: 55px 0 45px;
+  background-color: black; }
+  .footer .footer__soc-icon {
+    color: #444348;
+    font-size: 16px;
+    margin: 0 15px 30px 15px; }
+    .footer .footer__soc-icon:hover {
+      color: #008ed6; }
+  .footer .footer__text {
+    font-size: 14px;
+    font-family: "Source Sans Pro-SemiBold";
+    color: #444348;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=Style.preproc.css.map */
