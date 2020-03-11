@@ -181,6 +181,107 @@ $bold-font: 'Source Sans Pro-Bold';
   }
 }
 
+.device {
+  padding: 30px 0;
+  border-top: #ededed 1px solid;
+
+  .device__block {
+    //background-image: url("../images/dev.png");
+    height: 635px;
+  }
+
+  .device__list {
+
+    font-family: $secondary-font;
+    color: #1b1b1b;
+
+
+    li {
+      list-style-type: none;
+      font-family: $secondary-font;
+      margin-bottom: 20px;
+      font-size: 18px;
+
+      &:nth-child(1):before {
+        font-family: FontAwesome;
+        content: " \f091";
+        color: $complementary-color;
+        font-size: 18px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      &:nth-child(2):before {
+        font-family: FontAwesome;
+        content: " \f8cc";
+        color: $complementary-color;
+        font-size: 18px;
+        display: inline-block;
+      }
+
+      &:nth-child(3):before {
+        font-family: FontAwesome;
+        content: " \f0e7";
+        color: $complementary-color;
+        font-size: 18px;
+        display: inline-block;
+      }
+
+      &:nth-child(4):before {
+        font-family: FontAwesome;
+        content: " \f3fd";
+        color: $complementary-color;
+        font-size: 18px;
+        display: inline-block;
+      }
+
+    }
+  }
+}
+
+
+
+.device__text {
+  font-size: 18px;
+  font-family: $secondary-font;
+  color: #999999;
+}
+
+.device__title {
+  margin-top: 90px;
+
+  h2 {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      margin-left: 2px;
+      width: 20px;
+      height: 2px;
+      background-color: $complementary-color;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 22px;
+      margin-left: 2px;
+      width: 20px;
+      height: 2px;
+      background-color: $complementary-color;
+
+    }
+  }
+}
+
+
 .features {
   margin-bottom: 75px;
 
@@ -210,18 +311,35 @@ $bold-font: 'Source Sans Pro-Bold';
   }
 
 }
-
+@media (max-width: 992px) {
+  .like-what {
+    .btn{
+      margin-top: 30px;
+    }
+  }
+}
 .like-what {
   background-color: #15141a;
   padding: 60px 0;
   //margin-bottom: 60px;
   .btn {
-    width: 160px;
+    line-height: 35px;
+    border: 1px solid #444348;
+    width: 100%;
     height: 50px;
-    font-family: 'Source Sans Pro-Bold';
+    font-family: $bold-font;
     font-size: 14px;
     text-transform: uppercase;
     color: white;
+    //margin-top: 60px;
+    //margin-bottom: 30px;
+    //margin-left: -15px;
+
+  }
+
+  .btn:hover {
+    background-color: $complementary-color;
+    border: transparent;
   }
 
   .like-what__link1 {
@@ -268,12 +386,28 @@ $bold-font: 'Source Sans Pro-Bold';
     img {
       width: 60px;
       height: 60px;
+      display: inline-block;
     }
-
     .car_block__text {
       color: white;
       font-size: 24px;
       font-family: 'Source Sans Pro-It';
+    }
+    .car_block__name{
+      display: inline-block;
+      font-family: $secondary-font;
+      font-size: 16px;
+      color: #fffefe;
+      margin-left: 25px;
+
+      position: relative;
+      top: 10px;
+      span{
+        font-family: $bold-font;
+        font-size: 14px;
+        color: #fffefe;
+      }
+
     }
   }
 }
@@ -307,8 +441,6 @@ $bold-font: 'Source Sans Pro-Bold';
 
 .pricings {
   padding-top: 60px;
-
-
 }
 
 .pricing__block {
@@ -494,12 +626,14 @@ $bold-font: 'Source Sans Pro-Bold';
     color: #444348;
     font-size: 16px;
     margin: 0 15px 30px 15px;
-    &:hover{
+
+    &:hover {
       color: #008ed6;
     }
 
   }
-  .footer__text{
+
+  .footer__text {
     font-size: 14px;
     font-family: $main-font;
     color: #444348;
