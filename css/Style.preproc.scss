@@ -21,7 +21,7 @@ $bold-font: 'Source Sans Pro-Bold';
     position: relative;
 
     a {
-      font-family: 'Source Sans Pro-SemiBold';
+      font-family: $main-font;
       font-size: 16px;
       text-shadow: none;
 
@@ -185,17 +185,13 @@ $bold-font: 'Source Sans Pro-Bold';
 .device {
   padding: 30px 0;
   border-top: #ededed 1px solid;
-
-  .device__block {
-    //background-image: url("../images/dev.png");
-    height: 635px;
-  }
-
   .device__list {
 
     font-family: $secondary-font;
     color: #1b1b1b;
 
+    margin-top: 40px;
+    padding-left: 0;
 
     li {
       list-style-type: none;
@@ -205,11 +201,12 @@ $bold-font: 'Source Sans Pro-Bold';
 
       &:nth-child(1):before {
         font-family: FontAwesome;
-        content: " \f091";
+        content: "\f091";
         color: $complementary-color;
         font-size: 18px;
         display: inline-block;
         text-align: center;
+        margin-right: 13px;
       }
 
       &:nth-child(2):before {
@@ -218,6 +215,8 @@ $bold-font: 'Source Sans Pro-Bold';
         color: $complementary-color;
         font-size: 18px;
         display: inline-block;
+        margin-right: 16px;
+        margin-left: 3px;
       }
 
       &:nth-child(3):before {
@@ -226,20 +225,22 @@ $bold-font: 'Source Sans Pro-Bold';
         color: $complementary-color;
         font-size: 18px;
         display: inline-block;
+        margin-right: 16px;
+        margin-left: 4px;
       }
 
       &:nth-child(4):before {
         font-family: FontAwesome;
-        content: " \f3fd";
+        content: "\f3fd";
         color: $complementary-color;
         font-size: 18px;
         display: inline-block;
+        margin-right: 10px;
       }
 
     }
   }
 }
-
 
 
 .device__text {
@@ -287,13 +288,13 @@ $bold-font: 'Source Sans Pro-Bold';
   margin-bottom: 75px;
 
   h3 {
-    font-family: 'Source Sans Pro-Regular';
+    font-family: $secondary-font;
     font-size: 24px;
     color: #1a1a1a;
   }
 
   p {
-    font-family: 'Source Sans Pro-Regular';
+    font-family: $secondary-font;
     color: #999999;
   }
 
@@ -312,17 +313,35 @@ $bold-font: 'Source Sans Pro-Bold';
   }
 
 }
+
 @media (max-width: 992px) {
   .like-what {
-    .btn{
+    .btn {
       margin-top: 30px;
     }
   }
 }
+
+.customize {
+  background-color: #f2f2f2;
+  padding: 30px 0 40px;
+
+  .customize__text {
+    font-size: 18px;
+    font-family: $secondary-font;
+    color: #999999;
+  }
+
+  .title-block {
+    margin-top: 100px;
+  }
+
+}
+
+
 .like-what {
   background-color: #15141a;
   padding: 60px 0;
-  //margin-bottom: 60px;
   .btn {
     line-height: 35px;
     border: 1px solid #444348;
@@ -332,10 +351,6 @@ $bold-font: 'Source Sans Pro-Bold';
     font-size: 14px;
     text-transform: uppercase;
     color: white;
-    //margin-top: 60px;
-    //margin-bottom: 30px;
-    //margin-left: -15px;
-
   }
 
   .btn:hover {
@@ -358,7 +373,7 @@ $bold-font: 'Source Sans Pro-Bold';
   }
 
   .like-what__text {
-    font-family: 'Source Sans Pro-SemiBold';
+    font-family: $main-font;
     display: inline-block;
     font-size: 36px;
     color: white;
@@ -389,12 +404,14 @@ $bold-font: 'Source Sans Pro-Bold';
       height: 60px;
       display: inline-block;
     }
+
     .car_block__text {
       color: white;
       font-size: 24px;
       font-family: 'Source Sans Pro-It';
     }
-    .car_block__name{
+
+    .car_block__name {
       display: inline-block;
       font-family: $secondary-font;
       font-size: 16px;
@@ -403,7 +420,8 @@ $bold-font: 'Source Sans Pro-Bold';
       margin-bottom: 140px;
       position: relative;
       top: 10px;
-      span{
+
+      span {
         font-family: $bold-font;
         font-size: 14px;
         color: #fffefe;
@@ -412,7 +430,6 @@ $bold-font: 'Source Sans Pro-Bold';
     }
   }
 }
-
 
 .owl-dots .owl-dot span {
   display: inline-block;
@@ -453,7 +470,7 @@ $bold-font: 'Source Sans Pro-Bold';
   .pricing__block-cost {
     display: block;
     padding: 40px 0;
-    font-family: 'Source Sans Pro-SemiBold';
+    font-family: $main-font;
     font-size: 48px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
@@ -468,7 +485,7 @@ $bold-font: 'Source Sans Pro-Bold';
   h3 {
     padding-bottom: 30px;
     font-size: 24px;
-    font-family: 'Source Sans Pro-Bold';
+    font-family: $bold-font;
     text-transform: uppercase;
 
   }
@@ -524,14 +541,14 @@ $bold-font: 'Source Sans Pro-Bold';
   padding-top: 60px;
 
   .contact-us__span {
-    font-family: 'Source Sans Pro-Bold';
+    font-family: $bold-font;
     color: #008ed6;
     font-size: 14px;
     text-transform: uppercase;
   }
 
   .contact-us__h2 {
-    font-family: 'Source Sans Pro-SemiBold';
+    font-family: $main-font;
     font-size: 36px;
     position: relative;
     margin-bottom: 72px;
@@ -545,6 +562,7 @@ $bold-font: 'Source Sans Pro-Bold';
     p {
       font-size: 18px;
       color: #999999;
+      margin-bottom: 20px;
     }
   }
 
@@ -572,7 +590,7 @@ $bold-font: 'Source Sans Pro-Bold';
     }
 
     button {
-      font-family: 'Source Sans Pro-Bold';
+      font-family: $bold-font;
       font-size: 14px;
       width: 100%;
       background-color: #008ed6;
@@ -585,25 +603,25 @@ $bold-font: 'Source Sans Pro-Bold';
 
     ::-webkit-input-placeholder {
       color: #444348;
-      font-family: 'Source Sans Pro-Bold';
+      font-family: $bold-font;
       text-transform: uppercase;
     }
 
     ::-moz-placeholder {
       color: #444348;
-      font-family: 'Source Sans Pro-Bold';
+      font-family: $bold-font;
       text-transform: uppercase;
     }
 
     :-moz-placeholder {
       color: #444348;
-      font-family: 'Source Sans Pro-Bold';
+      font-family: $bold-font;
       text-transform: uppercase;
     }
 
     :-ms-input-placeholder {
       color: #444348;
-      font-family: 'Source Sans Pro-Bold';
+      font-family: $bold-font;
       text-transform: uppercase;
     }
   }
